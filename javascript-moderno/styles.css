@@ -1,0 +1,13 @@
+body{
+    background-color: #dacece;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.sheet{
+    background-color: #d37777;
+    border: 3px solid black;
+    margin: 15px auto;
+    padding: 15px;
+    width: 200px;
+}
