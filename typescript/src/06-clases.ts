@@ -2,6 +2,8 @@
 // las propiedades privadas solo son accesibles desde la clase donde se declaran
 // las propiedades protegidas son accesibles desde la clase donde se declaran y desde las que se hereden
 class Car{
+
+    public prueba: string
     constructor(
         public brand:string,
         public model:string,
@@ -9,7 +11,9 @@ class Car{
         public year:number,
         protected started: boolean = false,
         protected speed:number = 0
-        ) {}
+        ) {
+            this.prueba = "cinlolosada"
+        }
 
     public startUp():void{
         console.log('clase padre')

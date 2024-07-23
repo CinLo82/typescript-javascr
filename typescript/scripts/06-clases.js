@@ -10,6 +10,7 @@ class Car {
         this.year = year;
         this.started = started;
         this.speed = speed;
+        this.prueba = "cinlolosada";
     }
     startUp() {
         console.log('clase padre');
