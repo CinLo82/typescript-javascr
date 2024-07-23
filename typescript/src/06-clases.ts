@@ -7,13 +7,16 @@ class Car{
         public model:string,
         public color:string,
         public year:number,
-        private started: boolean = false,
-        private speed:number = 0
+        protected started: boolean = false,
+        protected speed:number = 0
         ) {}
 
     public startUp():void{
+        console.log('clase padre')
+        this.speed = 135
         this.started = true
     }
+
     public turnOff():void{
         this.started = false
     }
@@ -41,8 +44,37 @@ class Car{
     public get getColor():string {
         return this.color
     }
+
+    static hello():string{ 
+        return 'Hola q tal'
+    }
 }
 
+class Track extends Car {
+    constructor(
+        public brand:string,
+        public model:string,
+        public color:string,
+        public year:number,
+        ) {
+            super(brand, model, color, year)
+        }
+
+        public startUp(): void {
+            console.log('clase hija')
+            this.speed = 200
+            this.started = true
+        }
+        
+        public watch() {
+            super.startUp()
+            console.log(this)
+            return this.started     
+        }
+}
+let mi_track = new Track('Jeep', 'Renegade','negra', 2019)
+console.log(mi_track.watch())
+/* 
 let mi_car: Car = new Car('Renault', 'Clio', 'Rojo', 2020)
 
 console.log(mi_car.watchAll())
@@ -53,3 +85,6 @@ mi_car.accelerate()
 mi_car.accelerate()
 mi_car.accelerate()
 console.log(mi_car)
+console.log(Car.hello())
+
+*/
