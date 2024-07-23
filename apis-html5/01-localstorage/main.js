@@ -36,3 +36,8 @@ document.querySelector('#all').addEventListener('click', (event) => {
     localStorage.clear();
     datos.innerHTML = '';
 })
+
+// sacar objeto del localstorage
+let person = JSON.parse(localStorage.getItem('person'))
+console.log(person)
+datos.innerHTML += person.sitio 
