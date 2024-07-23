@@ -12,10 +12,16 @@ function modmen(watch:boolean) {
 }
 }
 
+function my_property(target: Object, propertyKey:string, parameterIndex: number){
+    console.log('Esta propiedad esta en la clase ' + target.constructor.name + ' y la posición del parámetro es ' + parameterIndex )
+}
+
 class Computer{
 
+    marca:string = 'Asus'
+
     @modmen(false)
-    turnOn(mensaje: string){
+    turnOn(@my_property mensaje: string){
         console.log('Encendiendo...');
         console.log(mensaje);
     }
