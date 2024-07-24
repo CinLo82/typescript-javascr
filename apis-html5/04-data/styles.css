@@ -1,0 +1,29 @@
+li {
+    background-color: rgb(252, 253, 253);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #1a1717;
+    padding: 20px;
+    text-align: center;
+    list-style: none;
+}
+
+li[data-continente="Europa"] {
+    background-color: rgb(29, 71, 207);
+    color: #fffefe;
+}
+
+li[data-continente="America"] {
+    background-color: rgb(158, 89, 143);
+    color: #fffefe;
+}
+
+li[data-continente="Oceania"] {
+    background-color: rgb(18, 180, 159);
+    color: #fffefe;
+}
+
+li[data-continente="Asia"] {
+    background-color: rgb(199, 201, 76);
+    color: #221e1e;
+}
