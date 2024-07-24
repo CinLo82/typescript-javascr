@@ -4,21 +4,25 @@ body{
     padding: 0;
 }
 
-.tomato {
+.tomato, .lechuga {
     width: 50px;
     height: 50px;
-    background-color: rgb(30, 172, 129);
+    background-color: rgb(221, 39, 39);
     margin: 10px;
     float: left;
     margin: 20px;
     border-radius: 100px;
 }
 
+.lechuga {
+    background-color: chartreuse;
+}
+
 .tomato img {
     width: 45px;
 }
 
-#huerto {
+#huerto, #cesta {
     width: 90%;
     height: 400px;
     background-color: rgb(189, 78, 204);
@@ -26,4 +30,12 @@ body{
     clear: both;
     text-align: center;
     line-height: 300px;
+}
+
+#cesta {
+    height: 100px;
+    line-height: 100px;
+    background-color: burlywood;
+    padding: 10px;
+    margin-bottom: 10px;
 }

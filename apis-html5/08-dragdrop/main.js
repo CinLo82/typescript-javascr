@@ -1,34 +1,46 @@
-const tomates = document.querySelectorAll('.tomato')
+const hortalizas = document.querySelectorAll('#cesta > div')
 const huerto = document.querySelector('#huerto')
+const cesta = document.querySelector('#cesta')
 
-tomates.forEach((tomate, indice) => {
-    tomate.addEventListener('dragstart', () =>{
-        console.log('Estas moviendo el tomate ' + parseInt(indice+1))
-    })
-    // drag
-    tomate.addEventListener('drag', () =>{
-        console.log('Estas arrastrando el tomate ' + parseInt(indice+1))
-    })
-    // dragend
-    tomate.addEventListener('dragend', () =>{
-        console.log('Estas moviendo el tomate ' + parseInt(indice+1))
-    })
+hortalizas.forEach((hortaliza, indice) => {
+
+    //asignar id a elemento
+    hortaliza.setAttribute('id', 'hortaliza'+indice)
+
+    hortaliza.addEventListener('dragstart', (e) =>{
+    // compartir info del elemento q muevo
+    e.dataTransfer.setData('text', e.target.id)
+
+    })  
+})
+
+//dragover
+huerto.addEventListener('dragover', (e) => {    
+    e.preventDefault()
+
 })
 
 //drop
 huerto.addEventListener('drop', (e) => {
     e.preventDefault()
-    console.log('Tomate plantado')
+    //recibir la informacion y soltar el elemnto en la zona
+    let hortaliza = e.dataTransfer.getData('text')
+    e.target.appendChild(document.getElementById(hortaliza))
+
+    console.log('Haz plantado la hortaliza: ' + hortaliza)
 })
 
-
-//dragover
-huerto.addEventListener('dragover', (e) => {    
+cesta.addEventListener('dragover', (e) => {    
     e.preventDefault()
-    console.log('Estoy sobre el huerto')
+
 })
 
-//dragleave
-huerto.addEventListener('dragleave', () => {
-    console.log('Saliendo del huerto')
+//drop
+cesta.addEventListener('drop', (e) => {
+    e.preventDefault()
+    //recibir la informacion y soltar el elemnto en la zona
+    let hortaliza = e.dataTransfer.getData('text')
+    e.target.appendChild(document.getElementById(hortaliza))
+
+    console.log('Haz recogido la hortaliza: ' + hortaliza)
 })
