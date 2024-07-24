@@ -61,9 +61,38 @@ body{
 
 .nav{
     grid-area: nav;
-    border: 5px solid black;
-    background-color: lightcoral;
+    background: #1f4037;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #99f2c8, #1f4037); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+.nav ul{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav li{
+    margin: 10px;
+
+}
+
+.nav a{
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-weight: lighter;
+    transition: all 300ms;
+}
+
+.nav a:hover{
+    color: #1f4037;
+    transform: scale(1.1, 1.1);
+}
+
+/* Estilos del contenido principal */
 
 .content{
     grid-area: content;
