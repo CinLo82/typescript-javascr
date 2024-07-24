@@ -107,7 +107,7 @@ body{
     background-color: #d7dfdb;
     border-radius: 10px;
     box-shadow: 0px 0px 6px #ddd;
-    margin: 20px 40px;
+    margin: 20px;
     padding: 60px 25px;
 }
 
@@ -139,9 +139,38 @@ input[type="button"]{
 
 .lateral{
     grid-area: lateral;
-    border: 5px solid black;
-    background-color: lightcoral;
+    background-color: #f6f7f9;
+    border-left: 1px solid #ddd;
+    padding: 20px;
 }
+
+.lateral > div{
+    box-sizing: border-box;
+    width: 90%;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 10px;
+    background-color: #d7dfdb;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #ddd;
+}
+
+.lateral input[type="text"],
+.lateral input[type="text"],
+.lateral textarea{
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #f6f7f9;
+    color: #454545;
+    width: 90%;
+    opacity: 4;
+    outline: 0;
+    border-color: transparent;
+}
+
 
 .footer{
     grid-area: footer;
