@@ -41,9 +41,8 @@ export default class Add{
 
             //guardar en el localstorage
             this.storage.save(pelis)
-            //actualizar listado
-            this.list.addToList(peli, pelis)
-
+            // actualizar listado
+            this.list.show(pelis)
             }
 
             console.log('acabas de enviar el formulario de add', title, description)

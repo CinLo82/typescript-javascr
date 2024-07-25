@@ -7,7 +7,7 @@ export default class Storage{
     getData(){
         let pelis = JSON.parse(localStorage.getItem('pelis'));
 
-        if(!pelis || pelis.lenght < 1 ) {
+        if(pelis.length === 0 ) {
             pelis = [
                 {
                     id: 0,
