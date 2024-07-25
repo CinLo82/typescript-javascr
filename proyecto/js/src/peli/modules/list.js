@@ -1,4 +1,5 @@
 import deleteOfList from './delete.js'
+import edit from './edit.js'
 
 export default class List{
     constructor(){
@@ -32,5 +33,8 @@ export default class List{
 
         // funcionalidad de los botones de borrado
         deleteOfList();
+
+        // funcionalidad de los botones de edicion
+        edit()
     }
 }
