@@ -1,9 +1,11 @@
 import Storage from "./storage.js";
+import List from "./list.js";
 
 export default class Add{
 
     constructor(){
-        this.storage = new Storage()
+        this.storage = new Storage();
+        this.list = new List();
 
         //conseguir elementos del dom a utilizar
         this.title_field = document.querySelector('#title');
@@ -40,6 +42,7 @@ export default class Add{
             //guardar en el localstorage
             this.storage.save(pelis)
             //actualizar listado
+            this.list.addToList(peli, pelis)
 
             }
 

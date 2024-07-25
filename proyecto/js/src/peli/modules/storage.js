@@ -12,7 +12,7 @@ export default class Storage{
                 {
                     id: 0,
                     title: 'La vida es bella',
-                    description: 'Un hombre trata de hacer creer a su hijo que la vida en un campo de concentración es un juego'
+                    description: 'Un hombre trata de hacer creer...'
                 }
             ];
             this.id = 1;
