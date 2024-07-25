@@ -1,6 +1,7 @@
 import Add from "./modules/add.js"
 import List from "./modules/list.js"
 import Storage from "./modules/storage.js"
+import Search from "./modules/search.js"
 
 export default class App{
 
@@ -21,6 +22,7 @@ export default class App{
         //listar peliculas
         this.list.show(pelis)
         // buscar peliculas
+        Search();
 
         console.log('La applicación de películas ha sido inicializada')
     }
